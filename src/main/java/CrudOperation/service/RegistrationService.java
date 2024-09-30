@@ -1,20 +1,15 @@
 package CrudOperation.service;
 
-import CrudOperation.dto.LoginDto;
-import CrudOperation.dto.RegistrationDto;
 import CrudOperation.entity.Registration;
 
 import java.util.List;
 
 public interface RegistrationService {
+    void createRegistration(Registration registration);
 
-    Registration addUser(RegistrationDto registrationDto);
-
-    String verifyLogin(LoginDto loginDto);
+    List<Registration> getAllRegistrations();
 
     void deleteRegistration(long id);
 
-    void updateRegistration(long id, RegistrationDto registrationDto);
-
-    List<Registration> getAllRegistrations();
+    void updateRegistration(long id, Registration registration);
 }
